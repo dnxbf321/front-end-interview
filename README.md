@@ -13,15 +13,13 @@ posts.each do |post|
 end
 ```
 
-post 继承 author 的方法和属性，post 可以直接访问到 name。
+posts 的 author 相同，posts.each 打印出来的 author.name 是一样的，没必要做循环
 
 代码修改为
 
 ```ruby
 posts = Post.limit(50)
-posts.each do |post|
-  puts post.name
-end
+puts posts.first.author.name
 ```
 
 
